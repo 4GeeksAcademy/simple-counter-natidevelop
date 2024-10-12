@@ -29,14 +29,14 @@ const renderSecondsCounter = () => {
                 <SecondsCounter counter={seconds} />
             </div>
 
-            <div className="text-center mt-4 w-100 px-3">
+            <div className="text-center mt-4 w-50 px-3">
                 <input
                     id="finDelMundo"
                     className="form-control mb-3"
                     onChange={(event) => {
                         seconds = event.target.value;
                     }}
-                    placeholder="Ingresar la cantidad de segundos para la cuenta regresiva"
+                    placeholder="Ingresar Segundos para darle fin a la pagina"
                     type="number"
                 />
                 <div className="d-flex justify-content-center flex-wrap w-100">
@@ -46,7 +46,7 @@ const renderSecondsCounter = () => {
                             intervalo=undefined;
                         }}
                         type="button"
-                        className="btn m-2 rounded btn-secondary w-25"
+                        className="btn m-2 rounded btn-dark text-primary w-15"
                     >
                         Pausar
                     </button>
@@ -56,7 +56,7 @@ const renderSecondsCounter = () => {
                             document.querySelector("#finDelMundo").value = undefined;
                         }}
                         type="button"
-                        className="btn m-2 rounded btn-secondary w-25"
+                        className="btn m-2 rounded btn-dark text-danger w-15"
                     >
                         Reiniciar
                     </button>
@@ -67,7 +67,7 @@ const renderSecondsCounter = () => {
                             }
                         }}
                         type="button"
-                        className="btn m-2 rounded btn-secondary w-25"
+                        className="btn m-2 rounded btn-dark text-success w-15"
                     >
                         Resumir
                     </button>
@@ -76,7 +76,7 @@ const renderSecondsCounter = () => {
                             sentido = !sentido;
                         }}
                         type="button"
-                        className="btn m-2 rounded btn-primary w-25"
+                        className="btn m-2 rounded btn-dark w-15"
                     >
                         {sentido ? "Avanzar" : "Retroceder"}
                     </button>
